@@ -1,0 +1,48 @@
+MobX
+Simple, scalable state management
+
+Vincent Prouillet
+We Are Wizards / Proppy
+vincent@wearewizards.io
+https://wearewizards.io
+@WeAreWizardsIO
+
+
+* About me
+
+- Developer
+- https://github.com/keats
+- We Are Wizards: MVP / ML agency
+- Proppy (https://proppy.io): proposal writing tool
+
+* Outline
+
+1. MobX introduction with code
+2. MobX by example: Proppy
+
+* MobX introduction 1: Principle
+
+- Transparent functional reactive programming
+.link https://medium.com/@mweststrate/becoming-fully-reactive-an-in-depth-explanation-of-mobservable-55995262a254#.9aufnt6up Article from MobX author
+
+.image flow.png _ 978
+
+: observable state that can derive computed values and react to actions
+
+* MobX introduction 2: Observables and autorun
+
+- Example 1: observing arrays and map changes
+- Example 2: observing class properties and transactions
+
+* MobX introduction 3: Computed
+
+- Example 3
+
+* MobX introduction 4: Actions
+
+- Example 4
+
+* MobX by example: Proppy
+
+- Before: Redux + ImmutableJS
+- Now: MobX + Lodash

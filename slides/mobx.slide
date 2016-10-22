@@ -4,7 +4,7 @@ Simple, scalable state management
 Vincent Prouillet
 We Are Wizards / Proppy
 vincent@wearewizards.io
-https://wearewizards.io
+https://wearewizards.io / https://proppy.io
 @WeAreWizardsIO
 
 
@@ -17,10 +17,20 @@ https://wearewizards.io
 
 * Outline
 
-1. MobX introduction with code
-2. MobX by example: Proppy
+1. MobX by example
+2. MobX in practice: Proppy
+3. Useful links
 
-* MobX introduction 1: Principle
+Slides and examples available at: https://github.com/Keats/mobx-talk
+
+* What's MobX
+
+- State management for frontend apps
+- Not tied to any particular view framework (ie works with React, Angular2, etc)
+- Written in TypeScript so definitions work out of the box if you are using TS
+- Very small learning curve, can be productive in an hour
+
+* MobX principle
 
 - Transparent functional reactive programming
 .link https://medium.com/@mweststrate/becoming-fully-reactive-an-in-depth-explanation-of-mobservable-55995262a254#.9aufnt6up Article from MobX author
@@ -29,20 +39,52 @@ https://wearewizards.io
 
 : observable state that can derive computed values and react to actions
 
-* MobX introduction 2: Observables and autorun
+* MobX by example
 
 - Example 1: observing arrays and map changes
 - Example 2: observing class properties and transactions
+- Example 3: computed
+- Example 4: actions
 
-* MobX introduction 3: Computed
+* MobX in practice 1
 
-- Example 3
-
-* MobX introduction 4: Actions
-
-- Example 4
-
-* MobX by example: Proppy
-
+- React + TypeScript (+ Flask/Postgres on backend)
 - Before: Redux + ImmutableJS
 - Now: MobX + Lodash
+
+_Pain points with Redux_
+
+- Very verbose
+- No easy access to other reducers in reducers
+- Annoying to type correctly: need to type payload once and action signature twice or more due to `connect`
+
+: show `proposal.ts` in Gitlab of the Redux era
+
+_Pain point with ImmutableJS_
+
+- Record typings not good
+- Maps are stringly typed - we use a lot of them in Proppy
+
+* MobX in practice 2
+
+- Originally a weekend project to try it out
+- Quickly saw how nice it was making the code
+- Took ~4 days to move to MobX + TS 2.0 + fix tons of small bugs/technical debt
+
+_Pain points with MobX_
+
+- No immutability
+- No ImmutableJS: no Set or convenience methods, Lodash replace those though
+
+* MobX in practice 3
+
+- Show current Proppy stores/components code
+
+
+* Useful links
+.link https://mobxjs.github.io/mobx/ MobX docs
+.link https://mobxjs.github.io/mobx/best/pitfalls.html Common pitfalls & best practices
+.link https://mobxjs.github.io/mobx/best/react.html What does MobX react to?
+.link https://github.com/mobxjs/mobx/issues/104 Example: real-life with router/ajax etc
+.link https://github.com/mobxjs/mobx/issues/199 Understanding MobX and when to use it.
+
